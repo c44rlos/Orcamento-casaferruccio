@@ -13,7 +13,7 @@
         
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
             min-height: 100vh;
             padding: 10px;
         }
@@ -34,22 +34,26 @@
         }
         
         .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
             color: white;
             padding: 40px 30px;
             text-align: center;
+            border-bottom: 4px solid #ff6b35;
         }
         
         .header h1 {
             font-size: 2.5em;
-            font-weight: 700;
+            font-weight: 900;
             margin-bottom: 10px;
-            letter-spacing: 2px;
+            letter-spacing: 8px;
+            color: #ff6b35;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
         }
         
         .header p {
             font-size: 1em;
             opacity: 0.9;
+            color: #fff;
         }
         
         @media (max-width: 768px) {
@@ -59,6 +63,7 @@
             
             .header h1 {
                 font-size: 2em;
+                letter-spacing: 4px;
             }
             
             .header p {
@@ -69,19 +74,23 @@
         .client-section {
             background: #f8f9fa;
             padding: 25px 30px;
-            border-bottom: 3px solid #667eea;
+            border-bottom: 3px solid #ff6b35;
         }
         
         .client-section h2 {
-            color: #333;
-            font-size: 1.2em;
-            margin-bottom: 10px;
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+            font-weight: 400;
+            letter-spacing: 3px;
         }
         
         .client-name {
-            color: #667eea;
-            font-size: 1.8em;
-            font-weight: bold;
+            color: #ff6b35;
+            font-size: 2.2em;
+            font-weight: 900;
+            letter-spacing: 4px;
+            text-shadow: 2px 2px 4px rgba(255, 107, 53, 0.2);
         }
         
         @media (max-width: 768px) {
@@ -90,11 +99,13 @@
             }
             
             .client-section h2 {
-                font-size: 1em;
+                font-size: 0.75em;
+                letter-spacing: 2px;
             }
             
             .client-name {
-                font-size: 1.5em;
+                font-size: 1.6em;
+                letter-spacing: 2px;
             }
         }
         
@@ -150,7 +161,7 @@
         
         .service-item:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
         }
         
         .service-info {
@@ -181,7 +192,7 @@
         .service-price {
             font-size: 1.8em;
             font-weight: bold;
-            color: #667eea;
+            color: #ff6b35;
             white-space: nowrap;
             min-width: 150px;
             text-align: right;
@@ -198,7 +209,7 @@
         }
         
         .total-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #ff6b35 0%, #1a1a1a 100%);
             padding: 25px;
             border-radius: 15px;
             color: white;
@@ -263,7 +274,7 @@
         
         .cta-button {
             display: inline-block;
-            background: #667eea;
+            background: #ff6b35;
             color: white;
             padding: 15px 40px;
             border-radius: 50px;
@@ -274,7 +285,7 @@
         }
         
         .cta-button:hover {
-            background: #764ba2;
+            background: #1a1a1a;
         }
         
         @media print {
@@ -299,8 +310,8 @@
         </div>
         
         <div class="client-section">
-            <h2>Proposta Comercial para:</h2>
-            <div class="client-name">Casa Ferruccio</div>
+            <h2>P R O P O S T A &nbsp;&nbsp; C O M E R C I A L</h2>
+            <div class="client-name">CASA FERRUCCIO</div>
         </div>
         
         <div class="content">
@@ -341,11 +352,11 @@
                     <div class="service-price">R$ 300</div>
                 </div>
                 
-                <div class="service-item" style="border: 2px solid #667eea;">
+                <div class="service-item" style="border: 2px solid #ff6b35;">
                     <div class="service-info">
                         <h3>📊 Investimento em Anúncios (valor pago à plataforma)</h3>
                         <p>Valor destinado exclusivamente para veiculação dos anúncios no Google, Instagram e Facebook. Esse investimento é pago diretamente às plataformas e não está incluso no valor da gestão de tráfego. O valor pode ser ajustado conforme estratégia, período e resultados obtidos.</p>
-                        <p style="margin-top: 10px; font-weight: bold; color: #667eea;">💰 Valor recomendado inicial: R$ 600/mês</p>
+                        <p style="margin-top: 10px; font-weight: bold; color: #ff6b35;">💰 Valor recomendado inicial: R$ 600/mês</p>
                     </div>
                 </div>
             </div>
