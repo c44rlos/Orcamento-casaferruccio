@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposta CAED - Casa Ferruccio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 5px;
+            }
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+        
+        .header p {
+            font-size: 1em;
+            opacity: 0.9;
+        }
+        
+        @media (max-width: 768px) {
+            .header {
+                padding: 30px 20px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .header p {
+                font-size: 0.9em;
+            }
+        }
+        
+        .client-section {
+            background: #f8f9fa;
+            padding: 25px 30px;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        .client-section h2 {
+            color: #333;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        
+        .client-name {
+            color: #667eea;
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+        
+        @media (max-width: 768px) {
+            .client-section {
+                padding: 20px 20px;
+            }
+            
+            .client-section h2 {
+                font-size: 1em;
+            }
+            
+            .client-name {
+                font-size: 1.5em;
+            }
+        }
+        
+        .content {
+            padding: 30px 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                padding: 20px 15px;
+            }
+        }
+        
+        .intro {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #555;
+            font-size: 1em;
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 768px) {
+            .intro {
+                font-size: 0.9em;
+                margin-bottom: 25px;
+            }
+        }
+        
+        .services {
+            margin-bottom: 40px;
+        }
+        
+        .service-item {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            gap: 15px;
+        }
+        
+        @media (max-width: 768px) {
+            .service-item {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 20px 15px;
+                gap: 10px;
+            }
+        }
+        
+        .service-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+        
+        .service-info {
+            flex: 1;
+        }
+        
+        .service-info h3 {
+            color: #333;
+            font-size: 1.3em;
+            margin-bottom: 8px;
+        }
+        
+        .service-info p {
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        @media (max-width: 768px) {
+            .service-info h3 {
+                font-size: 1.1em;
+            }
+            
+            .service-info p {
+                font-size: 0.85em;
+            }
+        }
+        
+        .service-price {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #667eea;
+            white-space: nowrap;
+            min-width: 150px;
+            text-align: right;
+        }
+        
+        @media (max-width: 768px) {
+            .service-price {
+                font-size: 2em;
+                min-width: auto;
+                width: 100%;
+                text-align: right;
+                margin-top: 5px;
+            }
+        }
+        
+        .total-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 25px;
+            border-radius: 15px;
+            color: white;
+            text-align: center;
+            margin-top: 25px;
+        }
+        
+        .total-section h3 {
+            font-size: 1.3em;
+            margin-bottom: 15px;
+        }
+        
+        .total-price {
+            font-size: 3em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .total-note {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+        
+        @media (max-width: 768px) {
+            .total-section {
+                padding: 20px 15px;
+            }
+            
+            .total-section h3 {
+                font-size: 1.1em;
+            }
+            
+            .total-price {
+                font-size: 2.5em;
+            }
+            
+            .total-note {
+                font-size: 0.85em;
+            }
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 25px 30px;
+            background: #f8f9fa;
+            color: #666;
+        }
+        
+        .footer p {
+            margin: 5px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .footer {
+                padding: 20px 15px;
+            }
+            
+            .footer p {
+                font-size: 0.9em;
+            }
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: background 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            background: #764ba2;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+            }
+            .service-item:hover {
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>CAED</h1>
+            <p>Marketing Digital & Gestão de Redes Sociais</p>
+        </div>
+        
+        <div class="client-section">
+            <h2>Proposta Comercial para:</h2>
+            <div class="client-name">Casa Ferruccio</div>
+        </div>
+        
+        <div class="content">
+            <div class="intro">
+                <p>Apresentamos nossa proposta completa de serviços digitais, desenvolvida especialmente para impulsionar a presença online da <strong>Casa Ferruccio</strong> e gerar resultados consistentes.</p>
+            </div>
+            
+            <div class="services">
+                <div class="service-item">
+                    <div class="service-info">
+                        <h3>📱 Gestão de Redes Sociais</h3>
+                        <p>Postagens, legendas, respostas básicas, organização do perfil</p>
+                    </div>
+                    <div class="service-price">R$ 600</div>
+                </div>
+                
+                <div class="service-item">
+                    <div class="service-info">
+                        <h3>🎯 Tráfego Pago - Google, Instagram e Facebook (mensal)</h3>
+                        <p>Criação e gestão de campanhas, otimização, relatórios simples</p>
+                    </div>
+                    <div class="service-price">R$ 500</div>
+                </div>
+                
+                <div class="service-item">
+                    <div class="service-info">
+                        <h3>🎨 Criação de Conteúdo</h3>
+                        <p>Produção de conteúdo visual e audiovisual para redes sociais, focada em fortalecer a marca, aumentar engajamento e gerar resultados</p>
+                    </div>
+                    <div class="service-price">R$ 400</div>
+                </div>
+                
+                <div class="service-item">
+                    <div class="service-info">
+                        <h3>🛒 Criação de Contas (Marketplace) - Pagamento Único</h3>
+                        <p>Shopee, Amazon etc. (Todas essas precisarão de autorização prévia por ser um produto destilado)</p>
+                    </div>
+                    <div class="service-price">R$ 300</div>
+                </div>
+                
+                <div class="service-item" style="border: 2px solid #667eea;">
+                    <div class="service-info">
+                        <h3>📊 Investimento em Anúncios (valor pago à plataforma)</h3>
+                        <p>Valor destinado exclusivamente para veiculação dos anúncios no Google, Instagram e Facebook. Esse investimento é pago diretamente às plataformas e não está incluso no valor da gestão de tráfego. O valor pode ser ajustado conforme estratégia, período e resultados obtidos.</p>
+                        <p style="margin-top: 10px; font-weight: bold; color: #667eea;">💰 Valor recomendado inicial: R$ 600/mês</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="total-section">
+                <h3>Investimento Total Mensal</h3>
+                <div class="total-price">R$ 1.800</div>
+                <p class="total-note">Pacote completo de Marketing Digital</p>
+                <p class="total-note" style="margin-top: 15px; font-size: 0.9em;">*Valores referentes aos serviços mensais. Criação de contas é investimento único.</p>
+            </div>
+            
+            <div style="background: #fff3cd; border: 2px solid #ffc107; padding: 25px; border-radius: 15px; margin-top: 25px; text-align: center;">
+                <h3 style="color: #856404; font-size: 1.3em; margin-bottom: 10px;">💰 Investimento Recomendado em Anúncios</h3>
+                <div style="font-size: 2.5em; font-weight: bold; color: #856404; margin: 15px 0;">R$ 600/mês</div>
+                <p style="color: #856404; font-size: 0.95em; line-height: 1.5;">Valor adicional pago diretamente às plataformas (Google, Instagram e Facebook) para veiculação dos anúncios. Não incluso no pacote de serviços acima.</p>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p><strong>CAED - Marketing Digital</strong></p>
+            <p>Transformando negócios através da presença digital estratégica</p>
+            <p style="margin-top: 15px; font-size: 0.9em;">Proposta válida por 30 dias</p>
+        </div>
+    </div>
+</body>
+</html>
